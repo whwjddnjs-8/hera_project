@@ -71,6 +71,25 @@ header ul li {
     font-family: 'Noto Sans KR', sans-serif;
     margin: 10px;
     cursor: pointer;
+    position: relative;
+
+}
+
+header ul li:after {
+    content: '';
+    position: absolute;
+    background-color: #222;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    transition: 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header ul li:hover:after {
+    width: 100%;
 }
 
 .icons i {
@@ -101,7 +120,7 @@ header ul li {
 }
 
 /* Main Banner */
-
+.slick-main-banner,
 .main-banner-item {
     position: relative;
 }
@@ -114,9 +133,47 @@ header ul li {
 
 .main-banner-desc {
     position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%)
+    top: 40%;
+    left: 10%;
+    /*transform: translate(-50%, -50%)*/
+}
+
+.slick-list .main-banner-desc h1,
+.slick-list .main-banner-desc-right h1{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: opacity 0s 3s, transform 0s 3s;
+}
+
+.slick-list .slick-active .main-banner-desc h1,
+.slick-list .slick-active .main-banner-desc-right h1 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 2s, transform 2s;
+}
+
+
+.slick-list .main-banner-desc p,
+.slick-list .main-banner-desc button,
+.slick-list .main-banner-desc-right p,
+.slick-list .main-banner-desc-right button{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 0s 3s, transform 0s 3s;
+}
+
+.slick-list .slick-active .main-banner-desc p,
+.slick-list .slick-active .main-banner-desc-right p{
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 2s, transform 2s;
+}
+
+.slick-list .slick-active .main-banner-desc button,
+.slick-list .slick-active .main-banner-desc-right button{
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 2s, transform 4s;
 }
 
 .main-banner-desc-right {
@@ -138,6 +195,7 @@ header ul li {
     margin: 0;
     margin-top: 10px
 }
+
 
 .main-banner-desc button,
 .main-banner-desc-right button {
@@ -194,6 +252,21 @@ header ul li {
     font-size: 45px;
     color: gray;
 }
+
+.slick-dots {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slick-dots .slick-active {
+    color: #ac8f63;
+}
+
 
 /* Silky Stay */
 .silky-stay {
