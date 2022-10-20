@@ -16,6 +16,7 @@ footer .sns i {
     font-size: 28px;
     margin: 15px 30px;
     color: #222;
+    cursor: pointer;
 }
 
 footer .sns i:last-child {
@@ -49,4 +50,3 @@ footer .sns i:last-child {
 .service-list.active {
     display: block;
 }
-
