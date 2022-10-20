@@ -23,10 +23,40 @@
                 <li>#HERA</li>
             </ul>
             <div class="icons">
-                <i class="xi-maker"></i>
-                <i class="xi-search"></i>
-                <i class="xi-user-o"></i>
-                <i class="xi-bars"></i>
+                <a href="./login.html">
+                    <i class="xi-maker"></i>
+                </a>
+                <a href="./login.html">
+                    <i class="xi-search"></i>
+                </a>
+                <a href="./login.html">
+                    <i class="xi-user-o"></i>
+                </a>
+                <i class="xi-bars menubar"></i>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="logo-area">
+                <img src="images/logo_black.png" width="40%">
+                <i class="xi-close close-menubar"></i>
+            </div>
+            <ul>
+                <li>헤라 스토리</li>
+                <li>메이크업</li>
+                <li>스킨케어</li>
+                <li>프레그린스</li>
+                <li>#HERA</li>
+            </ul>
+            <div class="icon-list">
+                <a href="./login.html">
+                    <i class="xi-maker"></i>
+                </a>
+                <a href="./login.html">
+                    <i class="xi-search"></i>
+                </a>
+                <a href="./login.html">
+                    <i class="xi-user-o"></i>
+                </a>
             </div>
         </div>
     </header>
@@ -39,7 +69,7 @@
                     <div class="main-banner-desc">
                         <h1>세상에 없던 NEW COMFORT MLBB</h1>
                         <p>센슈얼 파우더 매트 립스틱</p>
-                        <button>자세히 보기</button>
+                        <button class="btn">Buy Now</button>
                     </div>
                 </div>
                 <div class="main-banner-item">
@@ -47,7 +77,7 @@
                     <div class="main-banner-desc">
                         <h1>아침부터 저녁까지 매끈한 피부결</h1>
                         <p>실키 스테이 파운데이션</p>
-                        <button>자세히 보기</button>
+                        <button class="btn">Buy Now</button>
                     </div>
                 </div>
                 <div class="main-banner-item">
@@ -55,7 +85,7 @@
                     <div class="main-banner-desc">
                         <h1>내 피부처럼 가벼운 벨벳티 스킨</h1>
                         <p>블랙 쿠션</p>
-                        <button>자세히 보기</button>
+                        <button class="btn">Buy Now</button>
                     </div>
                 </div>
                 <div class="main-banner-item">
@@ -63,7 +93,7 @@
                     <div class="main-banner-desc-right">
                         <h1>뛰어난 지속력의 소프트 블러 벨벳 립</h1>
                         <p>센슈얼 파우더 매트 리퀴드</p>
-                        <button>자세히 보기</button>
+                        <button class="btn">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -76,9 +106,10 @@
                 </div>
                 <div class="product-info">
                     <div class="desc">
-                        <h2>실키 스테이 24H 롱웨어 파운데이션 SPF 20 / PA++<span>SILKY STAY 24H LONGWEAR SPF 20/ PA++ 30g</span></h2>
-                        <p>처음 바른 피부결 그대로 가볍고 실키하게 시간을 읽을 수 없는 피부를 연출해주는 파운데이션</p>
-                        <button>구매하러가기</button>
+                        <h2 class="m0">실키 스테이 24H 롱웨어 파운데이션 SPF 20 / PA++<span class="mt5">SILKY STAY 24H LONGWEAR SPF
+                                20/ PA++ 30g</span></h2>
+                        <p class="mt10">처음 바른 피부결 그대로 가볍고 실키하게 시간을 읽을 수 없는 피부를 연출해주는 파운데이션</p>
+                        <button class="btn">Buy Now</button>
                     </div>
                 </div>
                 <img data-aos="fade-left" data-aos-duration="1500" class="skin-img" src="images/skilyskin3.png" alt="">
@@ -88,13 +119,16 @@
         <section>
             <div class="matte-lipstick mt70">
                 <h1 class="section-title">SENSUAL POWDER MATTE LIPSTICK</h1>
-                <div class="fl" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="images/lipmlbb.jpg">
+                <div class="lipstick-image-area mt50">
+                    <div class="item" data-aos="fade-up" data-aos-duration="1500">
+                        <img src="images/lipmlbb.jpg" width="540px">
+                    </div>
+                    <div class="item" data-aos="fade-up" data-aos-duration="1500">
+                        <h1>COMFORT FITTING VELVET</h1>
+                        <img src="images/model3.jpg" width="570px">
+                    </div>
                 </div>
-                <div class="fr" data-aos="fade-up" data-aos-duration="1500">
-                    <h1>COMFROT FITTING VELVET</h1>
-                    <img src="images/model3.jpg">
-                </div>
+
             </div>
             <a href="#none">마치 내 입술인 듯 편안한 컴포트 MLBB 립스틱</a>
         </section>
@@ -214,10 +248,6 @@
             <i class="xi-kakaotalk"></i>
         </div>
         <div class="footer-inner">
-            <div class="service-tab">
-                <p class="footer-p">© AMOREPACIFIC CORPORATION. All rights reserved. </p>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
             <div class="service-list">
                 <ul>
                     <li>서비스이용약관</li>
@@ -238,6 +268,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+        
 
         $(document).scroll(function () {
             var height = $(window).scrollTop();
@@ -252,6 +283,14 @@
             $('.service-list').slideToggle();
             $('.service-tab i').toggleClass('active');
             $('.service-list').toggleClass('active');
+        })
+
+        $('.menubar').click(function () {
+            $('.header-right').css('right', '0')
+        })
+
+        $('.close-menubar').click(function () {
+            $('.header-right').css('right', '-400px')
         })
 
         $('.main-banner').slick({

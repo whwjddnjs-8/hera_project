@@ -15,7 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -25,17 +25,22 @@ header {
     cursor: pointer;
 }
 
-header ul {
+header .header-wrapper ul {
     list-style: none;
     display: flex;
     padding: 0;
 }
 
-header ul li {
+header .header-wrapper ul li {
     font-family: 'Noto Sans KR', sans-serif;
     margin: 0 20px;
     cursor: pointer;
     position: relative;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .icons i {
@@ -48,14 +53,19 @@ header ul li {
     display: none;
 }
 
+@media (min-width: 1144px) {
+    .header-right {
+        display: none;
+    }
+}
 
 @media (max-width: 1144px) {
-    header ul {
+    header .header-wrapper ul {
         display: none;
     }
 
-    .icons i:nth-child(1),
-    .icons i:nth-child(2) {
+    .icons a:nth-child(1) i,
+    .icons a:nth-child(2) i {
         display: none;
     }
 
@@ -63,4 +73,71 @@ header ul li {
         display: inline-block;
     }
 
+}
+
+.header-right {
+    position: absolute;
+    padding: 30px 20px;
+    right: -400px;
+    top: 0;
+    background-color: #fff;
+    color: #222;
+    width: 400px;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.header-right .logo-area {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-right .logo-area i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header-right ul {
+    list-style: none;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.header-right ul li {
+    font-size: 18px;
+    padding: 15px;
+    position: relative;
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+.header-right ul li:hover {
+    background-color: #eee;
+}
+
+.header-right ul li:after {
+    content: '\e93e';
+    font-family: xeicon;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-right .icon-list {
+    display: flex;
+    flex: 1;
+    font-size: 30px;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.header-right .icon-list i {
+    margin: 0 8px;
 }
